@@ -1,0 +1,454 @@
+body {
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(58, 71, 67);
+  color: rgb(0, 0, 0);
+  margin: 0;
+  padding: 0;
+
+}
+
+header {
+  background-color: rgb(56, 214, 167);
+  color: rgb(224, 224, 224);
+  padding: 15px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+
+li a {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  padding: 14px 30px;
+  transition: transform 0.2s, color 0.2s ease;
+  border-bottom: 3px solid transparent;
+}
+
+li a:hover {
+  transform: translateY(-2px);
+  color: rgb(58, 71, 67);
+}
+
+/* Active link indicator */
+li a.active {
+  border-bottom: 3px solid rgb(58, 71, 67);
+}
+h1{
+font-size: 100px;
+color: white;
+}
+.c{
+text-align: center;
+}
+p{
+color:white;
+}
+/* Gallery css code  */
+.h{
+ margin: 20px 0;
+ font-size: 100px;
+ color: white;
+ text-align: center;
+}
+.bento-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 200px;
+  gap: 15px;
+  padding: 40px 20px;
+  background-color: #121212;
+}
+
+.bento-item {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(56, 214, 167, 0.3);
+  cursor: pointer;
+}
+
+.bento-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(56, 214, 167, 0.6);
+}
+
+.bento-item.wide {
+  grid-column: span 2;
+}
+
+.bento-item.tall {
+  grid-row: span 2;
+}
+
+.bento-item.wide.tall {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+/* Caption on hover */
+.caption1 {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  padding: 15px 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: rgb(56, 214, 167);
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 1.1rem;
+  transition: bottom 0.3s ease;
+}
+
+.bento-item:hover .caption1 {
+  bottom: 0;
+}
+#video-box video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+section{
+  width: 100%;
+  padding: 80px 20px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.home-section{
+ background-image: url('home.jpg');
+ background-size: cover;
+ background-position: center;
+ width: 100%;
+ height: 100vh;
+ position: relative;
+ color:white;
+ display: flex;
+ align-item: center;
+ justify-content: center;
+}
+.home-section::before{
+  content: " ";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.home-section h1{
+ position: relative;
+ z-index:2;
+}
+
+/* THE PROJECT CARDS */
+.port1{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ gap: 20px;
+}
+
+.project-card{
+
+  background-color: rgb(58, 71, 67);
+  border: 4px solid rgb(56, 214, 167);
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  min-height: 300px;
+  margin: 20px;
+  box-shadow: 0 4px 20px rgba(56, 214, 167, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.3s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-item: center;
+  text-align: center;
+  position: relative;
+}
+
+.project-card :hover{
+ transform: translateY(-5px);
+}
+
+.project-card > h2 {
+  margin:0;
+  color: white;
+  justify-content: center;
+  text-align: center;
+}
+
+.project-card > p{
+ font-size:14px;
+ color: white;
+ justify-content: center;
+ text-align: center;
+}
+
+.project-card > a{
+ text-decoration: none;
+ display: inline-block;
+ padding: 10px 20px;
+ background-color: rgba(56, 214, 167, 0.5);
+ color: white;
+ border: none;
+ border-radius: 10px;
+ font-weight: bold;
+ margin-top: 15px;
+ transition: background-color 0.2s ease;
+ justify-content: center;
+}
+.project-card > a:hover{
+background-color : rgb(58, 71, 67);
+}
+@media (max-width: 600px) {
+  .project-card {
+    width: 90%;
+    height: auto;
+  }
+}
+/*  THE END OF PROJECTS CARDS*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#About {
+  padding: 100px 20px; /* top-bottom & left-right */
+  color: white;
+}
+.p1{
+font-size: 20px;
+}
+.submit-container{
+  margin-top: 20px;
+  text-align: center;
+}
+.submit-btn{
+ padding: 12px 30px;
+ font-size: 1rem;
+ font-weight: bold;
+ color: rgb(250, 250, 250);
+ background-color: #00ffff;
+ border: none;
+ border-radius: 8px;
+ cursor: pointer;
+ transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover{
+ background-color: rgb(0, 221, 221);
+ transform: scale(1.05);
+}
+
+
+.Contact {
+    padding: 40px;
+    background: rgb(58, 71, 67);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+}
+
+.form_input {
+    width: 100%;
+    background: #121212;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    padding: 1.2em 1em 0.6em;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    resize: none;
+}
+
+label {
+    position: absolute;
+    left: 1em;
+    top: 1.1em;
+    background: #121212;
+    color: #aaa;
+    font-size: 1rem;
+    padding: 0 0.3em;
+    transition: all 0.2s ease;
+    pointer-events: none;
+}
+
+/* Float label on focus or input */
+.form_input:focus ~ label,
+.form_input:not(:placeholder-shown) ~ label {
+    top: -0.6em;
+    font-size: 0.75rem;
+    color: #00ffff;
+}
+
+/* Hover & focus styles */
+.form_input:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.form_input:focus {
+    border-color: #00ffff;
+}
+.foot{
+  background-color: rgb(56, 214, 167);
+  color: rgb(224, 224, 224);
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+/* back button from clothing  and  canvas*/
+.home-container{
+justify-content: center;
+text-align: center;
+}
+.back {
+ text-decoration: none;
+ display: inline-block;
+ padding: 10px 20px;
+ background-color: rgba(56, 214, 167, 0.5);
+ color: white;
+ border: none;
+ border-radius: 10px;
+ font-weight: bold;
+ margin-top: 15px;
+ transition: background-color 0.2s ease;
+ justify-content: center;
+ text-align: center;
+}
+.back:hover{
+background-color : rgb(58, 71, 67);
+}
+.four-box-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  padding: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.image-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(56, 214, 167, 0.6);
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.image-box:hover img {
+  transform: scale(1.05);
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 15px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+}
+
+.image-box:hover .caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ##############################################*/
+/* Client testimony */
+.testimony {
+  padding: 60px 20px;
+  background-color: #121212;
+  color: white;
+  text-align: center;
+}
+
+.testimony h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #00ffff;
+}
+
+.testimonial-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.testimonial-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid #00ffff;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 300px;
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05);
+}
+
+.testimonial-card p {
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.testimonial-card h4 {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #00ffff;
+}
+form{
+ all: unset;
+ display: contents;
+}
